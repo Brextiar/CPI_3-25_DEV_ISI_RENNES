@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sup de Cuisine - Accueil</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sup de Cuisine - Accueil</title>
 </head>
 <body>
-
+<header>
+  <p>Cherchez parmis plus de 1500 recettes du quotidient, simple et généreuses</p>
+  <div>
+    <label for="search"></label>
+    <input type="search" id="search" placeholder="Recherchez une recette, un ingrédient, ...">
+    <span class="search-icon">🔍</span>
+  </div>
+</header>
+<main>
+  <section>
+    <div>
+      <div>
+        <div>
+          <label for="search-ingredient"></label>
+          <select id="search-ingredient">
+            <option value="0">Ingrédients</option>
+            <option value="1">Poulet</option>
+            <option value="2">Boeuf</option>
+            <option value="3">Porc</option>
+          </select>
+        </div>
+        <div>
+          <label for="search-devices"></label>
+          <select id="search-devices">
+            <option value="0">Appareils</option>
+            <option value="1">Four</option>
+            <option value="2">Micro-onde</option>
+            <option value="3">Plaque de cuisson</option>
+          </select>
+        </div>
+        <div>
+          <label for="search-ustensils"></label>
+          <select id="search-ustensils">
+            <option value="0">Ustensiles</option>
+            <option value="1">Couteau</option>
+            <option value="2">Fourchette</option>
+            <option value="3">Cuillère</option>
+          </select>
+        </div>
+      </div>
+      <div>
+        <p><span>50</span> recettes</p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <p>Poulet</p>
+        <p>X</p>
+      </div>
+      <div>
+        <p>Fouet</p>
+        <p>X</p>
+      </div>
+    </div>
+  </section>
+</main>
 </body>
 </html>
