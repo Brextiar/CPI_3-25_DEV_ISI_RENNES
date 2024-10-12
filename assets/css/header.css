@@ -1,0 +1,20 @@
+header {
+  background-image: url(../images/hero-home-page.webp);
+  background-size: cover;
+  width: 100%;
+
+  >div{
+    align-items: center;
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+
+    p{
+      text-align: center;
+    }
+  }
+}
