@@ -1,0 +1,23 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  /*TODO : faire le responsive pour la search barre*/
+  .input-container {
+    display: flex;
+
+    div {
+      width: 150px;
+      margin-right: 25px;
+
+      select {
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 10px;
+        width: 100%;
+      }
+    }
+  }
+}
