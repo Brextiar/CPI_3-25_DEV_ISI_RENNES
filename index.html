@@ -7,8 +7,9 @@
   <!-- FONTS -->
   <link rel="stylesheet" href="./assets/css/fonts.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <link rel="stylesheet" href="./assets/css/header.css">
-  <link rel="stylesheet" href="./assets/css/card.css">
+  <link rel="stylesheet" href="assets/css/index/header.css">
+  <link rel="stylesheet" href="assets/css/index/main.css">
+  <link rel="stylesheet" href="assets/css/index/card.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -78,126 +79,138 @@
   </section>
   <section>
     <h2>Parcourez les recettes</h2>
-    <article class="recipe-card">
-      <div class="img-container">
-        <img src="./assets/images/Recette01.webp" alt="Image de la recette">
-      </div>
-      <div>
-        <h2>Limonade de coco</h2>
-        <h3>Recette</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis omnis
-          vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
-          consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore ut
-          veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
-          possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis consequatur
-          cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium magnam
-          magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
-          vitae voluptas?</p>
-        <h3>Ingrédients</h3>
-        <ul>
-          <li>
-            <p>Lait de coco</p>
-            <p>400 ml</p>
-          </li>
-          <li>
-            <p>Jus de citron</p>
-            <p>2</p>
-          </li>
-          <li>
-            <p>Crème de coco</p>
-            <p>4 cuillères</p>
-          </li>
-          <li>
-            <p>Sucre</p>
-            <p>20 g</p>
-          </li>
-          <li>
-            <p>Glaçons</p>
-            <p>2</p>
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="recipe-card">
-      <div class="img-container">
-        <img src="./assets/images/Recette02.webp" alt="Image de la recette">
-      </div>
-      <div>
-        <h2>Limonade de coco</h2>
-        <h3>Recette</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis omnis
-          vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
-          consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore ut
-          veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
-          possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis consequatur
-          cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium magnam
-          magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
-          vitae voluptas?</p>
-        <h3>Ingrédients</h3>
-        <ul>
-          <li>
-            <p>Lait de coco</p>
-            <p>400 ml</p>
-          </li>
-          <li>
-            <p>Jus de citron</p>
-            <p>2</p>
-          </li>
-          <li>
-            <p>Crème de coco</p>
-            <p>4 cuillères</p>
-          </li>
-          <li>
-            <p>Sucre</p>
-            <p>20 g</p>
-          </li>
-          <li>
-            <p>Glaçons</p>
-            <p>2</p>
-          </li>
-        </ul>
-      </div>
-    </article>
-    <article class="recipe-card">
-      <div class="img-container">
-        <img src="./assets/images/Recette03.webp" alt="Image de la recette">
-      </div>
-      <div>
-        <h2>Limonade de coco</h2>
-        <h3>Recette</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis omnis
-          vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
-          consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore ut
-          veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
-          possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis consequatur
-          cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium magnam
-          magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
-          vitae voluptas?</p>
-        <h3>Ingrédients</h3>
-        <ul>
-          <li>
-            <p>Lait de coco</p>
-            <p>400 ml</p>
-          </li>
-          <li>
-            <p>Jus de citron</p>
-            <p>2</p>
-          </li>
-          <li>
-            <p>Crème de coco</p>
-            <p>4 cuillères</p>
-          </li>
-          <li>
-            <p>Sucre</p>
-            <p>20 g</p>
-          </li>
-          <li>
-            <p>Glaçons</p>
-            <p>2</p>
-          </li>
-        </ul>
-      </div>
-    </article>
+    <div class="cards-container">
+      <article class="recipe-card">
+        <div class="img-container">
+          <img src="./assets/images/Recette01.webp" alt="Image de la recette">
+        </div>
+        <div class="recipe-container">
+          <h2>Limonade de coco</h2>
+          <h3>Recette</h3>
+          <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis
+            omnis
+            vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
+            consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore ut
+            veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
+            possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis consequatur
+            cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium
+            magnam
+            magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
+            vitae voluptas?</p>
+          <h3>Ingrédients</h3>
+          <ul>
+            <li>
+              <p>Lait de coco</p>
+              <p>400 ml</p>
+            </li>
+            <li>
+              <p>Jus de citron</p>
+              <p>2</p>
+            </li>
+            <li>
+              <p>Crème de coco</p>
+              <p>4 cuillères</p>
+            </li>
+            <li>
+              <p>Sucre</p>
+              <p>20 g</p>
+            </li>
+            <li>
+              <p>Glaçons</p>
+              <p>2</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article class="recipe-card">
+        <div class="img-container">
+          <img src="./assets/images/Recette02.webp" alt="Image de la recette">
+        </div>
+        <div>
+          <div class="recipe-container">
+            <h2>Limonade de coco</h2>
+            <h3>Recette</h3>
+            <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis
+              omnis
+              vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
+              consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore
+              ut
+              veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
+              possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis
+              consequatur
+              cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium
+              magnam
+              magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
+              vitae voluptas?</p>
+            <h3>Ingrédients</h3>
+            <ul>
+              <li>
+                <p>Lait de coco</p>
+                <p>400 ml</p>
+              </li>
+              <li>
+                <p>Jus de citron</p>
+                <p>2</p>
+              </li>
+              <li>
+                <p>Crème de coco</p>
+                <p>4 cuillères</p>
+              </li>
+              <li>
+                <p>Sucre</p>
+                <p>20 g</p>
+              </li>
+              <li>
+                <p>Glaçons</p>
+                <p>2</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article class="recipe-card">
+        <div class="img-container">
+          <img src="./assets/images/Recette03.webp" alt="Image de la recette">
+        </div>
+        <div class="recipe-container">
+          <h2>Limonade de coco</h2>
+          <h3>Recette</h3>
+          <p class="recipe-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias deserunt earum est impedit neque nobis
+            omnis
+            vero voluptate! Assumenda dolorem dolores nam placeat praesentium provident quos vel. Accusamus commodi
+            consectetur, corporis harum nam voluptas voluptate. Delectus excepturi natus officiis repudiandae tempore ut
+            veritatis. A aperiam atque dolor, dolore eaque eligendi eveniet ipsam laudantium neque nulla odio porro
+            possimus quos sapiente suscipit temporibus velit. Ad amet asperiores aspernatur atque blanditiis consequatur
+            cum, deserunt distinctio dolorum eius, exercitationem explicabo facere illo impedit in ipsa laudantium
+            magnam
+            magni maxime natus, necessitatibus non perspiciatis porro quam quasi quibusdam quidem reiciendis ut veniam
+            vitae voluptas?</p>
+          <h3>Ingrédients</h3>
+          <ul>
+            <li>
+              <p>Lait de coco</p>
+              <p>400 ml</p>
+            </li>
+            <li>
+              <p>Jus de citron</p>
+              <p>2</p>
+            </li>
+            <li>
+              <p>Crème de coco</p>
+              <p>4 cuillères</p>
+            </li>
+            <li>
+              <p>Sucre</p>
+              <p>20 g</p>
+            </li>
+            <li>
+              <p>Glaçons</p>
+              <p>2</p>
+            </li>
+          </ul>
+        </div>
+      </article>
+    </div>
   </section>
 </main>
 
