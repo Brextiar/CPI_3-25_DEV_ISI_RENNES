@@ -35,35 +35,82 @@
   <section class="search-container">
     <div class="filters">
       <div class="input-container">
-        <div>
-          <label for="search-ingredient"></label>
-          <select id="search-ingredient">
-            <option value="0">Ingrédients</option>
-            <option value="1">Poulet</option>
-            <option value="2">Boeuf</option>
-            <option value="3">Porc</option>
-          </select>
+        <!--####################################################################-->
+        <div class="search-tag-container">
+          <label class="label-justify-content" id="search-ingredients-label" for="ingredient-search-tags-input">
+            <span>Ingrédients</span>
+            <span id="ingredients-button-wrapper">
+            <i class="fa-solid fa-chevron-left"></i>
+            </span>
+          </label>
+          <div class="display-none" id="displayed-Ingredients-tag-search">
+            <div class="input-wrapper">
+              <input class="search-tags-input" type="text" id="ingredient-search-tags-input" placeholder="Ingrédients">
+              <div class="button-wrapper">
+                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <ul class="search-tags-list">
+              <li>Poulet</li>
+              <li>Poulet</li>
+              <li>Poulet</li>
+              <li>Poulet</li>
+              <li>Poulet</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <label for="search-devices"></label>
-          <select id="search-devices">
-            <option value="0">Appareils</option>
-            <option value="1">Four</option>
-            <option value="2">Micro-onde</option>
-            <option value="3">Plaque de cuisson</option>
-          </select>
+        <div class="search-tag-container">
+          <label id="search-devices-label" for="devices-search-tags-input">
+            Appareils
+            <span id="devices-button-wrapper">
+            <i class="fa-solid fa-chevron-left"></i>
+            </span>
+          </label>
+          <div class="display-none" id="displayed-device-tag-search">
+            <div class="input-wrapper">
+              <input class="search-tags-input" type="text" id="devices-search-tags-input" placeholder="Appareils">
+              <div class="button-wrapper">
+                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <ul class="search-tags-list">
+              <li>Mixeur</li>
+              <li>Mixeur</li>
+              <li>Mixeur</li>
+              <li>Mixeur</li>
+              <li>Mixeur</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <label for="search-ustensils"></label>
-          <select id="search-ustensils">
-            <option value="0">Ustensiles</option>
-            <option value="1">Couteau</option>
-            <option value="2">Fourchette</option>
-            <option value="3">Cuillère</option>
-          </select>
+        <div class="search-tag-container">
+          <label id="search-utensils-label" for="utensils-search-tags-input">
+            Ustensiles
+            <span id="utensils-button-wrapper">
+            <i class="fa-solid fa-chevron-left"></i>
+            </span>
+          </label>
+          <div class="display-none" id="displayed-utensils-tag-search">
+            <div class="input-wrapper">
+              <input class="search-tags-input" type="text" id="utensils-search-tags-input" placeholder="Appareils">
+              <div class="button-wrapper">
+                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+              </div>
+            </div>
+            <ul class="search-tags-list">
+              <li>Fouet</li>
+              <li>Fouet</li>
+              <li>Fouet</li>
+              <li>Fouet</li>
+              <li>Fouet</li>
+            </ul>
+          </div>
         </div>
+        <!--####################################################################-->
       </div>
-      <div>
+      <div class="nbr-recipes">
         <h2><span>50</span> recettes</h2>
       </div>
     </div>
@@ -227,5 +274,6 @@
 </main>
 
 <script src="https://kit.fontawesome.com/b70107a254.js" crossorigin="anonymous"></script>
+<script src="assets/javascript/filter-bar.js"></script>
 </body>
 </html>

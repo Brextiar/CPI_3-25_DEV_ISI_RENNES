@@ -1,5 +1,14 @@
 .filters {
+  width: 100%;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
 }
 
 .tag-container {
@@ -39,3 +48,132 @@
 .utensils {
   background-color: lightblue;
 }
+
+.search-container {
+  width: 100%;
+}
+
+.search-tag-container {
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    font-size: 0.8rem;
+    width: 33%;
+  }
+
+}
+
+.nbr-recipes {
+  @media screen and (min-width: 768px) {
+    width: 25%;
+    display: flex;
+    justify-content: right;
+  }
+
+  h2 {
+    text-align: start;
+    font-size: 1.4rem;
+
+    span{
+      display: inline-block;
+    }
+  }
+}
+
+.input-container {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 75%;
+    display: flex;
+    align-items: start;
+    gap: 10px;
+  }
+}
+
+.display-none {
+  display: none;
+
+  ul {
+    display: flex;
+    gap : 5px;
+    flex-wrap: wrap;
+
+    li {
+      list-style: none;
+      border : 1px solid #000;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      display: flex;
+      padding: 2px 5px 2px 5px;
+      width: fit-content;
+    }
+  }
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  width: 100%;
+}
+
+
+.search-tags-input {
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 5px;
+  width: 100%;
+}
+
+.button-wrapper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1px;
+  top: 2px;
+  right: 5px;
+}
+.clear-btn,
+.input-search-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.search-tags-list {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#ingredients-button-wrapper {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+#devices-button-wrapper {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+#utensils-button-wrapper {
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.turn {
+  transform: rotate(-90deg) !important;
+}
+
+
