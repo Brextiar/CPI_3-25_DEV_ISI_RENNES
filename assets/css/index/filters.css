@@ -112,7 +112,6 @@
       cursor: pointer;
       border-radius: 5px;
       font-size: 0.8rem;
-      display: flex;
       padding: 2px 5px 2px 5px;
       width: fit-content;
     }
@@ -159,19 +158,11 @@
 .search-tags-list {
   margin-top: 10px;
   font-size: 14px;
+  max-height: 110px;
+  overflow: auto;
 }
 
-#ingredients-button-wrapper {
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-#devices-button-wrapper {
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-#utensils-button-wrapper {
+#ingredients-button-wrapper, #devices-button-wrapper, #utensils-button-wrapper  {
   display: inline-block;
   transition: 0.3s ease;
 }

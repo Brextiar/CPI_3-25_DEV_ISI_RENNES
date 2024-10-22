@@ -37,7 +37,9 @@
 
     .recipe-description {
       height: 200px;
-      overflow: scroll;
+      overflow: auto;
+      scrollbar-width: thin;
+      scrollbar-color: #ffeada #cbb5a7;
     }
 
     ul {

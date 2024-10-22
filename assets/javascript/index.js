@@ -1,22 +1,22 @@
 import { initSessionStorage } from "./data/sessionStorageManager.js";
-import { createList } from "./factories/tagFactory.js";
-import { createRecipe } from "./factories/recipe.js";
+import { updateTagList } from "./factories/tag.js";
+import { updateDOM } from "./updateDOM.js";
 
 const ingredientsList = document.getElementById("ingredients-list");
 const devicesList = document.getElementById("devices-list");
 const utensilsList = document.getElementById("utensils-list");
 
 const recipeContainer = document.getElementById("recipes-container");
+const recipeNumber = document.getElementById("recipe-number");
 
 document.addEventListener("DOMContentLoaded", () => {
   initSessionStorage();
-  createList(ingredientsList, JSON.parse(sessionStorage.getItem("ingredients")));
-  createList(devicesList, JSON.parse(sessionStorage.getItem("devices")));
-  createList(utensilsList, JSON.parse(sessionStorage.getItem("ustensils")));
+  updateDOM(recipeContainer, JSON.parse(sessionStorage.getItem("recipes")), recipeNumber);
+
+  updateTagList(ingredientsList, JSON.parse(sessionStorage.getItem("ingredients")));
+  updateTagList(devicesList, JSON.parse(sessionStorage.getItem("devices")));
+  updateTagList(utensilsList, JSON.parse(sessionStorage.getItem("utensils")));
 });
 
-JSON.parse(sessionStorage.getItem("recipes")).forEach( recipe => {
-  const rec = createRecipe(recipe);
-  recipeContainer.append(rec.createCard());
-});
+
 

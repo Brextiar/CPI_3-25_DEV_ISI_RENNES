@@ -32,6 +32,9 @@ function extractUtensils() {
   return JSON.stringify(Array.from(ustensilSet).sort());
 }
 
+/**
+ * Initialize the sessionStorage with the recipes, ingredients, devices and ustensils
+ */
 function initSessionStorage() {
   getData().then((recipes) => {
     if (!sessionStorage.getItem('recipes') || JSON.parse(sessionStorage.getItem('recipes')).length !== recipes.length) {
@@ -39,7 +42,7 @@ function initSessionStorage() {
       sessionStorage.setItem('recipesStach', '');
       sessionStorage.setItem('ingredients', extractIngredients());
       sessionStorage.setItem('devices', extractDevices());
-      sessionStorage.setItem('ustensils', extractUtensils());
+      sessionStorage.setItem('utensils', extractUtensils());
       console.log('sessionStorage initialized');
     }
   });
