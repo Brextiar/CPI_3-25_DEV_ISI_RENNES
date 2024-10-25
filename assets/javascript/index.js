@@ -1,22 +1,19 @@
-import { initSessionStorage } from "./data/sessionStorageManager.js";
-import { updateTagList } from "./factories/tag.js";
+import { fetchData } from "./data/sessionStorageManager.js";
 import { updateDOM } from "./updateDOM.js";
 
-const ingredientsList = document.getElementById("ingredients-list");
-const devicesList = document.getElementById("devices-list");
-const utensilsList = document.getElementById("utensils-list");
-
-const recipeContainer = document.getElementById("recipes-container");
-const recipeNumber = document.getElementById("recipe-number");
+const recipesList = new Set();
+const filteredRecipes = new Set();
+let ingredientTagsList = [];
+const selectedIngredients = new Set();
+const deviceTagsList = new Set();
+const selectedDevices = new Set();
+const utensilTagsList = new Set();
+const selectedUtensils = new Set();
 
 document.addEventListener("DOMContentLoaded", () => {
-  initSessionStorage();
-  updateDOM(recipeContainer, JSON.parse(sessionStorage.getItem("recipes")), recipeNumber);
-
-  updateTagList(ingredientsList, JSON.parse(sessionStorage.getItem("ingredients")));
-  updateTagList(devicesList, JSON.parse(sessionStorage.getItem("devices")));
-  updateTagList(utensilsList, JSON.parse(sessionStorage.getItem("utensils")));
+  fetchData(recipesList, ingredientTagsList, deviceTagsList, utensilTagsList).then(() => {
+    updateDOM(recipesList, ingredientTagsList, deviceTagsList, utensilTagsList);
+  });
 });
 
-
-
+export { recipesList, filteredRecipes, ingredientTagsList, selectedIngredients, deviceTagsList, selectedDevices, utensilTagsList, selectedUtensils };
