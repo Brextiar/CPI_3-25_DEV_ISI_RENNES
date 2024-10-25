@@ -79,6 +79,7 @@ function removeTagFromList(TagsList, tagName) {
     TagsList.delete(tagName);
 }
 //TODO : faire en sorte de construire mes list avec un array à partir d'un set pour ne conserver que des éléments uniques puis trier la liste.
+// tagList doit être un Array pour que je n'ai qu'à push et sort
 function addTagToTagsList(tagList, tagName) {
   const array = [...tagList].push(tagName);
   array.sort;
