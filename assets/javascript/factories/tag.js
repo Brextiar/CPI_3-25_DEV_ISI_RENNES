@@ -1,3 +1,8 @@
+import {updateDOM} from "../updateDOM.js";
+import {getRecipesByTags} from "../data/getRecipes.js";
+
+const selectedTagItems = [];
+
 function createListTagItem(tagName) {
   const tagItem = document.createElement('li');
   tagItem.innerText = tagName;
@@ -7,6 +12,9 @@ function createListTagItem(tagName) {
     const tagItem = createSelectedTagItem(tagName, tagType);
     const selectedTagContainer = document.getElementById('selected-tag-container');
     selectedTagContainer.append(tagItem);
+    selectedTagItems.push(tagName);
+    console.log(selectedTagItems);
+    getRecipesByTags(selectedTagItems);
   });
   return tagItem;
 }
@@ -38,3 +46,5 @@ function createSelectedTagItem(tagName, tagType) {
 
   return tagItem;
 }
+
+export {createListTagItem, createSelectedTagItem};

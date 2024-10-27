@@ -1,4 +1,5 @@
 import { createRecipe } from "./factories/recipe.js";
+import {createListTagItem} from "./factories/tag.js";
 
 /**
  * Update the tag list in the DOM

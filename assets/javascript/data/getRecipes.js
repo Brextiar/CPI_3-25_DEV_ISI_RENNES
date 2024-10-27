@@ -11,10 +11,26 @@ function getData() {
 
 function getRecipes() {
   getData()
-    .then((recipes) => { updateDOM(recipes) })
+    .then((recipes) => {
+      updateDOM(recipes)
+    })
     .catch(error => error)
 }
 
+function getRecipesByTags(selectedTags) {
+  getData()
+    .then((recipes) => {
+      const filteredRecipes = recipes.filter(recipe => {
+        const {ingredients, appliance, ustensils} = recipe;
+        return selectedTags.every(tag => {
+          return ingredients.some(ingredient => ingredient.ingredient === tag)
+            || appliance.includes(tag)
+            || ustensils.includes(tag);
+        });
+      });
+      updateDOM(filteredRecipes);
+    })
+    .catch(error => error)
+}
 
-
-export { getRecipes };
+export {getRecipes, getRecipesByTags};
