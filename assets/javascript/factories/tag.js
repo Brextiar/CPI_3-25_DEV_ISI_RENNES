@@ -1,5 +1,4 @@
-import {updateDOM} from "../updateDOM.js";
-import {getRecipesByTags} from "../data/getRecipes.js";
+import {getRecipes, getRecipesByTags} from "../data/getRecipes.js";
 
 const selectedTagItems = [];
 
@@ -41,7 +40,15 @@ function createSelectedTagItem(tagName, tagType) {
   `;
 
   tagItem.addEventListener('click', (e) => {
+    selectedTagItems.splice(selectedTagItems.indexOf(tagName), 1);
+    console.log("selected", selectedTagItems);
+    if (selectedTagItems.length === 0) {
+      getRecipes();
+    } else {
+      getRecipesByTags(selectedTagItems);
+    }
     tagItem.remove();
+
   });
 
   return tagItem;

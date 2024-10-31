@@ -22,11 +22,17 @@ function updateTagList(ulElement, tagsList) {
 function updateRecipesList(recipes) {
   const recipesContainer = document.getElementById("recipes-container");
   recipesContainer.innerHTML = "";
-  const sortedRecipes = recipes.sort((a, b) => a.name.localeCompare(b.name));
-  sortedRecipes.forEach((recipe) => {
-    const rec = createRecipe(recipe);
-    recipesContainer.append(rec.createCard());
-  });
+  if (recipes.length === 0) {
+    const noRecipeElement = document.createElement("p");
+    noRecipeElement.innerText = "Aucune recette ne correspond à votre critère… vous pouvez chercher « tarte aux pommes », « poisson », etc.";
+    recipesContainer.append(noRecipeElement);
+  } else {
+    const sortedRecipes = recipes.sort((a, b) => a.name.localeCompare(b.name));
+    sortedRecipes.forEach((recipe) => {
+      const rec = createRecipe(recipe);
+      recipesContainer.append(rec.createCard());
+    });
+  }
 }
 
 function updateNbrOfRecipes(nbrOfRecipes) {

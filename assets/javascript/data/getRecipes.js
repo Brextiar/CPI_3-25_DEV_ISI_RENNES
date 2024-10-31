@@ -18,6 +18,7 @@ function getRecipes() {
 }
 
 function getRecipesByTags(selectedTags) {
+
   getData()
     .then((recipes) => {
       const filteredRecipes = recipes.filter(recipe => {
@@ -33,4 +34,60 @@ function getRecipesByTags(selectedTags) {
     .catch(error => error)
 }
 
-export {getRecipes, getRecipesByTags};
+function getRecipesByWordInEveryWhere(word) {
+  const regex = new RegExp(word, 'gi');
+  getData()
+    .then((recipes) => {
+      const filteredRecipes = recipes.filter(recipe => {
+        const {name, description, ingredients, appliance, ustensils} = recipe;
+        return regex.test(name.toLowerCase())
+          || regex.test(description.toLowerCase())
+          || ingredients.some(ingredient => regex.test(ingredient.ingredient.toLowerCase()))
+          || regex.test(appliance)
+          || regex.test(ustensils);
+      });
+      updateDOM(filteredRecipes);
+    })
+    .catch(error => error)
+}
+
+function getRecipesByWordInIngredients(word) {
+  const regex = new RegExp(word, 'gi');
+  getData()
+    .then((recipes) => {
+      const filteredRecipes = recipes.filter(recipe => {
+        const {ingredients} = recipe;
+        return ingredients.some(ingredient => regex.test(ingredient.ingredient.toLowerCase()));
+      });
+      updateDOM(filteredRecipes);
+    })
+    .catch(error => error)
+}
+
+function getRecipesByWordInDevices(word) {
+  const regex = new RegExp(word, 'gi');
+  getData()
+    .then((recipes) => {
+      const filteredRecipes = recipes.filter(recipe => {
+        const {appliance} = recipe;
+        return regex.test(appliance);
+      });
+      updateDOM(filteredRecipes);
+    })
+    .catch(error => error)
+}
+
+function getRecipesByWordInUtensils(word) {
+  const regex = new RegExp(word, 'gi');
+  getData()
+    .then((recipes) => {
+      const filteredRecipes = recipes.filter(recipe => {
+        const {ustensils} = recipe;
+        return regex.test(ustensils);
+      });
+      updateDOM(filteredRecipes);
+    })
+    .catch(error => error)
+}
+
+export {getRecipes, getRecipesByTags, getRecipesByWordInEveryWhere, getRecipesByWordInIngredients, getRecipesByWordInDevices, getRecipesByWordInUtensils};
