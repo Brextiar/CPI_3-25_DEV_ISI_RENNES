@@ -85,10 +85,14 @@
 
 .input-container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 
   @media screen and (min-width: 768px) {
     width: 75%;
     display: flex;
+    flex-direction: row;
     align-items: start;
     gap: 10px;
   }
@@ -108,7 +112,6 @@
       cursor: pointer;
       border-radius: 5px;
       font-size: 0.8rem;
-      display: flex;
       padding: 2px 5px 2px 5px;
       width: fit-content;
     }
@@ -155,25 +158,17 @@
 .search-tags-list {
   margin-top: 10px;
   font-size: 14px;
+  max-height: 110px;
+  overflow: auto;
 }
 
-#ingredients-button-wrapper {
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-#devices-button-wrapper {
-  display: inline-block;
-  transition: 0.3s ease;
-}
-
-#utensils-button-wrapper {
+#ingredients-button-wrapper, #devices-button-wrapper, #utensils-button-wrapper  {
   display: inline-block;
   transition: 0.3s ease;
 }
 
 .turn {
-  transform: rotate(-90deg) !important;
+  transform: rotate(-90deg) ;
 }
 
 
