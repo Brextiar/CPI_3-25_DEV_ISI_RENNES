@@ -2,6 +2,11 @@ import {updateDOM} from "../updateDOM.js";
 
 const dataUrl = 'https://gist.githubusercontent.com/baiello/0a974b9c1ec73d7d0ed7c8abc361fc8e/raw/e598efa6ef42d34cc8d7e35da5afab795941e53e/recipes.json';
 
+/**
+ * Fetch the data from the dataUrl
+ *
+ * @returns {Promise<any>} that contains the recipes
+ */
 function getData() {
   return fetch(dataUrl)
     .then(response => response.json())
@@ -9,6 +14,9 @@ function getData() {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes
+ */
 function getRecipes() {
   getData()
     .then((recipes) => {
@@ -17,6 +25,11 @@ function getRecipes() {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes that contain the selected tags
+ *
+ * @param selectedTags
+ */
 function getRecipesByTags(selectedTags) {
 
   getData()
@@ -34,6 +47,11 @@ function getRecipesByTags(selectedTags) {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes that contain the word in the name, description, ingredients, appliance or ustensils
+ *
+ * @param word
+ */
 function getRecipesByWordInEveryWhere(word) {
   const regex = new RegExp(word, 'gi');
   getData()
@@ -51,6 +69,11 @@ function getRecipesByWordInEveryWhere(word) {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes that contain the word in the ingredients
+ *
+ * @param word
+ */
 function getRecipesByWordInIngredients(word) {
   const regex = new RegExp(word, 'gi');
   getData()
@@ -64,6 +87,11 @@ function getRecipesByWordInIngredients(word) {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes that contain the word in the appliance
+ *
+ * @param word
+ */
 function getRecipesByWordInDevices(word) {
   const regex = new RegExp(word, 'gi');
   getData()
@@ -77,6 +105,11 @@ function getRecipesByWordInDevices(word) {
     .catch(error => error)
 }
 
+/**
+ * Update the DOM with the recipes that contain the word in the ustensils
+ *
+ * @param word
+ */
 function getRecipesByWordInUtensils(word) {
   const regex = new RegExp(word, 'gi');
   getData()

@@ -2,6 +2,13 @@ import {getRecipes, getRecipesByTags} from "../data/getRecipes.js";
 
 const selectedTagItems = [];
 
+/**
+ * Create a tag item with an eventListener to display in the list and update DOM when selected
+ *
+ * @param   tagName
+ *
+ * @returns {HTMLLIElement}
+ */
 function createListTagItem(tagName) {
   const tagItem = document.createElement('li');
   tagItem.innerText = tagName;
@@ -10,14 +17,23 @@ function createListTagItem(tagName) {
     const tagType = e.target.parentElement.id;
     const tagItem = createSelectedTagItem(tagName, tagType);
     const selectedTagContainer = document.getElementById('selected-tag-container');
+
     selectedTagContainer.append(tagItem);
     selectedTagItems.push(tagName);
-    console.log(selectedTagItems);
+
     getRecipesByTags(selectedTagItems);
   });
   return tagItem;
 }
 
+/**
+ * Create a Selected tag item with an eventListener to delete the tag from the selected list and update the DOM
+ *
+ * @param   tagName
+ * @param   tagType
+ *
+ * @returns {HTMLDivElement}
+ */
 function createSelectedTagItem(tagName, tagType) {
   const tagItem = document.createElement('div');
   switch (tagType) {
@@ -34,6 +50,7 @@ function createSelectedTagItem(tagName, tagType) {
       tagItem.setAttribute('class', 'tag');
       break;
   }
+
   tagItem.innerHTML = `
   <p>${tagName}</p>
   <p>X</p>

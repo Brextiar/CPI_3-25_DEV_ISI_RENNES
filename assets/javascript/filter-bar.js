@@ -22,6 +22,12 @@ utensilsSearchInput.addEventListener('click', () => {
     toggleDisplay(utensilsDisplaySearch, utensilsTagsWrapperButton);
 });
 
+/**
+ * Toggle the display of a list of tags
+ *
+ * @param displayElement
+ * @param buttonElement
+ */
 function toggleDisplay(displayElement, buttonElement) {
     displayElement.style.display = displayElement.style.display === 'block' ? 'none' : 'block';
     buttonElement.classList.toggle('turn');
