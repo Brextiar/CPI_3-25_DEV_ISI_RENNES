@@ -2,7 +2,8 @@ import {
   getRecipes,
   getRecipesByWordInDevices,
   getRecipesByWordInEveryWhere,
-  getRecipesByWordInIngredients, getRecipesByWordInUtensils
+  getRecipesByWordInIngredients,
+  getRecipesByWordInUtensils
 } from "./data/getRecipes.js";
 
 document.addEventListener("DOMContentLoaded", () => {

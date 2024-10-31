@@ -35,11 +35,21 @@ function updateRecipesList(recipes) {
   }
 }
 
+/**
+ * Update the number of recipes displayed in the DOM
+ *
+ * @param nbrOfRecipes
+ */
 function updateNbrOfRecipes(nbrOfRecipes) {
   const nbrOfRecipeSpanElement = document.getElementById("recipe-number");
   nbrOfRecipeSpanElement.innerText = nbrOfRecipes;
 }
 
+/**
+ * Update the ingredients tags list in the DOM
+ *
+ * @param recipes
+ */
 function updateIngredientsTagsList(recipes) {
   const ingredientsListElement = document.getElementById("ingredients-list");
   const ingredientTagsList = new Set();
@@ -52,6 +62,11 @@ function updateIngredientsTagsList(recipes) {
   updateTagList(ingredientsListElement, arrayIngredientTagsList);
 }
 
+/**
+ * Update the devices tags list in the DOM
+ *
+ * @param recipes
+ */
 function updateDevicesTagsList(recipes) {
   const devicesListElement = document.getElementById("devices-list");
   const deviceTagsList = new Set();
@@ -62,6 +77,11 @@ function updateDevicesTagsList(recipes) {
   updateTagList(devicesListElement, arrayDeviceTagsList);
 }
 
+/**
+ * Update the utensils tags list in the DOM
+ *
+ * @param recipes
+ */
 function updateUtensilsTagsList(recipes) {
   const utensilsListElement = document.getElementById("utensils-list");
   const utensilTagsList = new Set();
@@ -74,6 +94,11 @@ function updateUtensilsTagsList(recipes) {
   updateTagList(utensilsListElement, arrayUtensilTagsList);
 }
 
+/**
+ * Centralize all the functions to update the DOM
+ *
+ * @param recipes
+ */
 function updateDOM(recipes) {
   updateRecipesList(recipes);
   updateNbrOfRecipes(recipes.length);

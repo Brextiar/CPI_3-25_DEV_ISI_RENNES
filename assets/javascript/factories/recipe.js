@@ -1,3 +1,10 @@
+/**
+ * Create a list of ingredients with quantity and unit
+ *
+ * @param   ingredients
+ *
+ * @returns {HTMLUListElement}
+ */
 function createIngredientList(ingredients) {
   const ul = document.createElement('ul');
 
@@ -14,6 +21,11 @@ function createIngredientList(ingredients) {
   return ul;
 }
 
+/**
+ * Create a recipe card
+ *
+ * @returns {HTMLElement}
+ */
 function createCard() {
   const article = document.createElement('article');
   article.setAttribute('class', 'recipe-card');
@@ -38,6 +50,13 @@ function createCard() {
   return article;
 }
 
+/**
+ * Create a recipe object
+ *
+ * @param recipe
+ *
+ * @returns {{appliance, image, servings, ustensils, name, createCard: (function(): HTMLElement), description, ingredients, id, time}}
+ */
 export const createRecipe = (recipe) => {
   const {appliance, description, id, image, ingredients, name, servings, time, ustensils} = recipe;
 
