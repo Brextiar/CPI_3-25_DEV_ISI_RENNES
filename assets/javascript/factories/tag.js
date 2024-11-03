@@ -1,7 +1,7 @@
-import {getRecipes, getRecipesByTags} from "../data/getRecipes.js";
+import {getRecipes, getRecipesByTags, getRecipesByWordInEveryWhere} from "../data/getRecipes.js";
 
 const selectedTagItems = [];
-
+const searchByWord = document.getElementById('search-by-word');
 /**
  * Create a tag item with an eventListener to display in the list and update DOM when selected
  *
@@ -58,9 +58,9 @@ function createSelectedTagItem(tagName, tagType) {
 
   tagItem.addEventListener('click', (e) => {
     selectedTagItems.splice(selectedTagItems.indexOf(tagName), 1);
-    console.log("selected", selectedTagItems);
-    if (selectedTagItems.length === 0) {
-      getRecipes();
+    if (selectedTagItems.length === 0 ) {
+      const word = searchByWord.value;
+      word.length > 2 ? getRecipesByWordInEveryWhere(word) : getRecipes();
     } else {
       getRecipesByTags(selectedTagItems);
     }
