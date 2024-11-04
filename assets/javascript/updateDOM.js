@@ -1,5 +1,5 @@
 import { createRecipe } from "./factories/recipe.js";
-import {createListTagItem} from "./factories/tag.js";
+import {createListTagItem, selectedTagItems} from "./factories/tag.js";
 
 /**
  * Update the tag list in the DOM
@@ -55,7 +55,9 @@ function updateIngredientsTagsList(recipes) {
   const ingredientTagsList = new Set();
   recipes.forEach((recipe) => {
     recipe.ingredients.forEach((ingredient) => {
-      ingredientTagsList.add(ingredient.ingredient);
+      if (!selectedTagItems.includes(ingredient.ingredient)) {
+        ingredientTagsList.add(ingredient.ingredient);
+      }
     });
   });
   const arrayIngredientTagsList = Array.from(ingredientTagsList).sort((a, b) => a.localeCompare(b));
@@ -71,7 +73,9 @@ function updateDevicesTagsList(recipes) {
   const devicesListElement = document.getElementById("devices-list");
   const deviceTagsList = new Set();
   recipes.forEach((recipe) => {
-    deviceTagsList.add(recipe.appliance);
+      if (!selectedTagItems.includes(recipe.appliance)) {
+        deviceTagsList.add(recipe.appliance);
+      }
   });
   const arrayDeviceTagsList = Array.from(deviceTagsList).sort((a, b) => a.localeCompare(b));
   updateTagList(devicesListElement, arrayDeviceTagsList);
@@ -87,7 +91,9 @@ function updateUtensilsTagsList(recipes) {
   const utensilTagsList = new Set();
   recipes.forEach((recipe) => {
     recipe.ustensils.forEach((utensil) => {
-      utensilTagsList.add(utensil);
+      if (!selectedTagItems.includes(utensil)) {
+        utensilTagsList.add(utensil);
+      }
     });
   });
   const arrayUtensilTagsList = Array.from(utensilTagsList).sort((a, b) => a.localeCompare(b));

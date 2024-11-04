@@ -23,8 +23,8 @@
     <h1>Sup de Cuisine</h1>
     <p>Cherchez parmis plus de 1500 recettes du quotidient, simple et généreuses</p>
     <div>
-      <label for="search"></label>
-      <input type="search" id="search-by-word" placeholder="Recherchez une recette, un ingrédient, ...">
+      <label for="search-by-word"></label>
+      <input type="search" id="search-by-word" placeholder="Recherchez une recette, un ingrédient, ..." autofocus>
       <button>
         <i class="fa-solid fa-magnifying-glass"></i>
       </button>
@@ -47,8 +47,8 @@
             <div class="input-wrapper">
               <input class="search-tags-input" type="text" id="ingredient-search-tags-input" placeholder="Ingrédients">
               <div class="button-wrapper">
-                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
-                <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="clear-btn" id="clear-ingredients"><i class="fa-solid fa-xmark"></i></button>
+                <div class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
               </div>
             </div>
             <ul class="search-tags-list" id="ingredients-list">
@@ -66,8 +66,8 @@
             <div class="input-wrapper">
               <input class="search-tags-input" type="text" id="devices-search-tags-input" placeholder="Appareils">
               <div class="button-wrapper">
-                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
-                <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="clear-btn" id="clear-devices"><i class="fa-solid fa-xmark"></i></button>
+                <div class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
               </div>
             </div>
             <ul class="search-tags-list" id="devices-list">
@@ -85,7 +85,7 @@
             <div class="input-wrapper">
               <input class="search-tags-input" type="text" id="utensils-search-tags-input" placeholder="Appareils">
               <div class="button-wrapper">
-                <button class="clear-btn"><i class="fa-solid fa-xmark"></i></button>
+                <button class="clear-btn" id="clear-utensils"><i class="fa-solid fa-xmark"></i></button>
                 <button class="input-search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
               </div>
             </div>

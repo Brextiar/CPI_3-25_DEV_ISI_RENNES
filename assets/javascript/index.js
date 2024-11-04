@@ -40,7 +40,7 @@ devicesSearchTagsInput.addEventListener("input", (e) => {
   const word = e.target.value;
   if (word.length > 2) {
     getRecipesByWordInDevices(word);
-  }else {
+  } else {
     getRecipes();
   }
 });
@@ -54,3 +54,22 @@ utensilsSearchTagsInput.addEventListener("input", (e) => {
     getRecipes();
   }
 });
+
+document.getElementById("clear-ingredients").addEventListener("click", (e) => {
+  e.preventDefault();
+  ingredientSearchTagsInput.value = "";
+  getRecipes();
+});
+
+document.getElementById("clear-devices").addEventListener("click", (e) => {
+  e.preventDefault();
+  devicesSearchTagsInput.value = "";
+  getRecipes();
+});
+
+document.getElementById("clear-utensils").addEventListener("click", (e) => {
+  e.preventDefault();
+  utensilsSearchTagsInput.value = "";
+  getRecipes();
+});
+
