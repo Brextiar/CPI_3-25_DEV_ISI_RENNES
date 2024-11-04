@@ -1,7 +1,8 @@
 import {getRecipes, getRecipesByTags, getRecipesByWordInEveryWhere} from "../data/getRecipes.js";
 
 const selectedTagItems = [];
-const searchByWord = document.getElementById('search-by-word');
+const mainSearchByWord = document.getElementById('search-by-word');
+
 /**
  * Create a tag item with an eventListener to display in the list and update DOM when selected
  *
@@ -20,8 +21,11 @@ function createListTagItem(tagName) {
 
     selectedTagContainer.append(tagItem);
     selectedTagItems.push(tagName);
-
+    document.getElementById("ingredient-search-tags-input").value = "";
+    document.getElementById("devices-search-tags-input").value = "";
+    document.getElementById("utensils-search-tags-input").value = "";
     getRecipesByTags(selectedTagItems);
+    e.target.remove();
   });
   return tagItem;
 }
@@ -59,7 +63,7 @@ function createSelectedTagItem(tagName, tagType) {
   tagItem.addEventListener('click', (e) => {
     selectedTagItems.splice(selectedTagItems.indexOf(tagName), 1);
     if (selectedTagItems.length === 0 ) {
-      const word = searchByWord.value;
+      const word = mainSearchByWord.value;
       word.length > 2 ? getRecipesByWordInEveryWhere(word) : getRecipes();
     } else {
       getRecipesByTags(selectedTagItems);
@@ -71,4 +75,4 @@ function createSelectedTagItem(tagName, tagType) {
   return tagItem;
 }
 
-export {createListTagItem, createSelectedTagItem};
+export {createListTagItem, createSelectedTagItem, selectedTagItems};
