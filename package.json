@@ -1,0 +1,14 @@
+{
+  "name": "cpi_3-25_dev_isi_rennes",
+  "version": "1.0.0",
+  "description": "**CPI 3-25 DEV ISI RENNES**",
+  "main": "./assets/javascript/index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
