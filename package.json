@@ -1,1 +1,27 @@
-{}
+{
+  "name": "cpi_3-25_dev_isi_rennes",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "**CPI 3-25 DEV ISI RENNES**",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES.git"
+  },
+  "author": "Antoine Ferron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES/issues"
+  },
+  "homepage": "https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES#readme",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
