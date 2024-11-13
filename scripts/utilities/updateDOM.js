@@ -1,4 +1,4 @@
-import { createRecipe } from "../factories/recipe.js";
+import {createRecipe} from "../factories/recipe.js";
 import {createListTagItem, selectedTagItems} from "../factories/tag.js";
 
 /**
@@ -73,9 +73,9 @@ function updateDevicesTagsList(recipes) {
   const devicesListElement = document.getElementById("devices-list");
   const deviceTagsList = new Set();
   recipes.forEach((recipe) => {
-      if (!selectedTagItems.includes(recipe.appliance)) {
-        deviceTagsList.add(recipe.appliance);
-      }
+    if (!selectedTagItems.includes(recipe.appliance)) {
+      deviceTagsList.add(recipe.appliance);
+    }
   });
   const arrayDeviceTagsList = Array.from(deviceTagsList).sort((a, b) => a.localeCompare(b));
   updateTagList(devicesListElement, arrayDeviceTagsList);
@@ -113,4 +113,4 @@ function updateDOM(recipes) {
   updateUtensilsTagsList(recipes);
 }
 
-export { updateDOM };
+export {updateDOM};

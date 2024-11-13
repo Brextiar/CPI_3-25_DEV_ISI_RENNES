@@ -1,1 +1,29 @@
-{}
+{
+  "name": "cpi_3-25_dev_isi_rennes",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "**CPI 3-25 DEV ISI RENNES**",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest --coverage --environment=jsdom",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES.git"
+  },
+  "author": "Antoine Ferron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES/issues"
+  },
+  "homepage": "https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES#readme",
+  "devDependencies": {
+    "@vitest/coverage-v8": "^2.1.4",
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.4"
+  }
+}
