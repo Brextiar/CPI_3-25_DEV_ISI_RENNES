@@ -1,3 +1,10 @@
+import '../styles/fonts.css'
+import '../styles/styles.css'
+import '../styles/index/card.css'
+import '../styles/index/header.css'
+import '../styles/index/main.css'
+import '../styles/index/filters.css'
+
 import {
   getRecipes,
   getRecipesByWordInDevices,

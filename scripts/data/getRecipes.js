@@ -1,4 +1,9 @@
+/*
+* This file contain the API calls to get the recipes and display them in the DOM.
+* */
+
 import {updateDOM} from "../utilities/updateDOM.js";
+import {filterByTag, filterByWordInEveryWhere} from "./filterFunctions.js";
 
 const dataUrl = 'https://gist.githubusercontent.com/baiello/0a974b9c1ec73d7d0ed7c8abc361fc8e/raw/e598efa6ef42d34cc8d7e35da5afab795941e53e/recipes.json';
 
@@ -18,7 +23,7 @@ function getData() {
  * Update the DOM with the recipes
  */
 function getRecipes() {
-  getData()
+  return getData()
     .then((recipes) => {
       updateDOM(recipes)
     })
@@ -34,15 +39,7 @@ function getRecipesByTags(selectedTags) {
 
   getData()
     .then((recipes) => {
-      const filteredRecipes = recipes.filter(recipe => {
-        const {ingredients, appliance, ustensils} = recipe;
-        return selectedTags.every(tag => {
-          return ingredients.some(ingredient => ingredient.ingredient === tag)
-            || appliance.includes(tag)
-            || ustensils.includes(tag);
-        });
-      });
-      updateDOM(filteredRecipes);
+      updateDOM(filterByTag(recipes, selectedTags));
     })
     .catch(error => error)
 }
@@ -53,18 +50,9 @@ function getRecipesByTags(selectedTags) {
  * @param word
  */
 function getRecipesByWordInEveryWhere(word) {
-  const regex = new RegExp(word, 'gi');
   getData()
     .then((recipes) => {
-      const filteredRecipes = recipes.filter(recipe => {
-        const {name, description, ingredients, appliance, ustensils} = recipe;
-        return regex.test(name.toLowerCase())
-          || regex.test(description.toLowerCase())
-          || ingredients.some(ingredient => regex.test(ingredient.ingredient.toLowerCase()))
-          || regex.test(appliance)
-          || regex.test(ustensils);
-      });
-      updateDOM(filteredRecipes);
+      updateDOM(filterByWordInEveryWhere(recipes, word));
     })
     .catch(error => error)
 }
@@ -123,4 +111,4 @@ function getRecipesByWordInUtensils(word) {
     .catch(error => error)
 }
 
-export {getRecipes, getRecipesByTags, getRecipesByWordInEveryWhere, getRecipesByWordInIngredients, getRecipesByWordInDevices, getRecipesByWordInUtensils};
+export {getData, getRecipes, getRecipesByTags, getRecipesByWordInEveryWhere, getRecipesByWordInIngredients, getRecipesByWordInDevices, getRecipesByWordInUtensils};

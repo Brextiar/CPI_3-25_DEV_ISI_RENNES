@@ -1,3 +1,7 @@
+/*
+  * Create a recipe object
+ */
+
 /**
  * Create a list of ingredients with quantity and unit
  *

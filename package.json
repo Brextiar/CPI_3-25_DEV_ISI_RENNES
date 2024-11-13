@@ -5,7 +5,10 @@
   "description": "**CPI 3-25 DEV ISI RENNES**",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "vitest --coverage --environment=jsdom",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
   "repository": {
     "type": "git",
@@ -18,10 +21,9 @@
   },
   "homepage": "https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES#readme",
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "babel-jest": "^29.7.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0"
+    "@vitest/coverage-v8": "^2.1.4",
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.11",
+    "vitest": "^2.1.4"
   }
 }

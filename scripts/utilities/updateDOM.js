@@ -56,7 +56,7 @@ function updateIngredientsTagsList(recipes) {
   recipes.forEach((recipe) => {
     recipe.ingredients.forEach((ingredient) => {
       if (!selectedTagItems.includes(ingredient.ingredient)) {
-        ingredientTagsList.add(ingredient.ingredient);
+        ingredientTagsList.add(ingredient.ingredient.toLowerCase());
       }
     });
   });
