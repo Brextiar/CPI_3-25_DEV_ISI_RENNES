@@ -11,15 +11,15 @@ const utensilsSearchInput = document.getElementById('search-utensils-label');
 const utensilsTagsWrapperButton = document.getElementById('utensils-button-wrapper');
 
 ingredientSearchInput.addEventListener('click', () => {
-    toggleDisplay(ingredientDisplaySearch, ingredientTagsWrapperButton);
+  toggleDisplay(ingredientDisplaySearch, ingredientTagsWrapperButton);
 });
 
 devicesSearchInput.addEventListener('click', () => {
-    toggleDisplay(devicesDisplaySearch, devicesTagsWrapperButton);
+  toggleDisplay(devicesDisplaySearch, devicesTagsWrapperButton);
 });
 
 utensilsSearchInput.addEventListener('click', () => {
-    toggleDisplay(utensilsDisplaySearch, utensilsTagsWrapperButton);
+  toggleDisplay(utensilsDisplaySearch, utensilsTagsWrapperButton);
 });
 
 /**
@@ -29,7 +29,7 @@ utensilsSearchInput.addEventListener('click', () => {
  * @param buttonElement
  */
 function toggleDisplay(displayElement, buttonElement) {
-    displayElement.style.display = displayElement.style.display === 'block' ? 'none' : 'block';
-    buttonElement.classList.toggle('turn');
+  displayElement.style.display = displayElement.style.display === 'block' ? 'none' : 'block';
+  buttonElement.classList.toggle('turn');
 }
 
