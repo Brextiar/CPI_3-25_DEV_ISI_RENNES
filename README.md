@@ -2,7 +2,7 @@
 
 # CPI_3-25_DEV_ISI_RENNES
 
-# Projet Développement Web
+# Projet Développement Web - Formateur : **[Brice AIELLO](https://github.com/baiello)**
 **CPI 3-25 DEV ISI RENNES**
 
 ---
