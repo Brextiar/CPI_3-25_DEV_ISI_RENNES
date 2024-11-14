@@ -1,3 +1,3 @@
 export default {
-  base: '/sdv-b3b-exo1/',
+  base: '/CPI_3-25_DEV_ISI_RENNES/',
 }
