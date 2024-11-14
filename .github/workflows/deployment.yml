@@ -2,7 +2,7 @@ name: Deployment on Github pages
 
 on:
   push:
-    branches: [ "deploy" ]
+    branches: [ "main" ]
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -43,6 +43,7 @@ jobs:
       with:
         # Upload dist repository
         path: dist/
+    - run: cp -r ./assets/images dist/assets
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v4
