@@ -27,6 +27,7 @@ function createListTagItem(tagName) {
     getRecipesByTags(selectedTagItems);
     e.target.remove();
   });
+
   return tagItem;
 }
 
@@ -62,7 +63,7 @@ function createSelectedTagItem(tagName, tagType) {
 
   tagItem.addEventListener('click', (e) => {
     selectedTagItems.splice(selectedTagItems.indexOf(tagName), 1);
-    if (selectedTagItems.length === 0 ) {
+    if (selectedTagItems.length === 0) {
       const word = mainSearchByWord.value;
       word.length > 2 ? getRecipesByWordInEveryWhere(word) : getRecipes();
     } else {

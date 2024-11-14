@@ -1,3 +1,7 @@
+/*
+  * Create a recipe object
+ */
+
 /**
  * Create a list of ingredients with quantity and unit
  *
@@ -7,18 +11,27 @@
  */
 function createIngredientList(ingredients) {
   const ul = document.createElement('ul');
+  if (ingredients) {
+    ingredients.forEach((ingredient) => {
+      const li = document.createElement('li');
 
-  ingredients.forEach((ingredient) => {
-    const li = document.createElement('li');
-
-    li.innerHTML = `
+      li.innerHTML = `
     <p>${ingredient.ingredient}</p>
     <p>${ingredient.quantity !== undefined ? ingredient.quantity : "QS"} ${ingredient.unit !== undefined ? ingredient.unit : ""}</p>
   `;
-    ul.append(li);
-  });
+      ul.append(li);
+    });
 
-  return ul;
+    return ul;
+  } else {
+    const li = document.createElement('li');
+
+    li.innerHTML = `
+    <p>Aucun ingrédient</p>
+   `;
+    ul.append(li);
+    return ul;
+  }
 }
 
 /**
@@ -55,7 +68,7 @@ function createCard() {
  *
  * @param recipe
  *
- * @returns {{appliance, image, servings, ustensils, name, createCard: (function(): HTMLElement), description, ingredients, id, time}}
+ * @returns {{appliance, image, servings, ustensils, name, createCard: (function(): HTMLElement), createIngredientList: (function(): HTMLUListElement), description, ingredients, id, time}}
  */
 export const createRecipe = (recipe) => {
   const {appliance, description, id, image, ingredients, name, servings, time, ustensils} = recipe;
@@ -70,6 +83,7 @@ export const createRecipe = (recipe) => {
     servings: servings,
     time: time,
     ustensils: ustensils,
-    createCard: createCard
+    createCard: createCard,
+    createIngredientList: createIngredientList,
   }
 }
