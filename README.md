@@ -1,9 +1,11 @@
 # **[Accéder au projet](https://brextiar.github.io/CPI_3-25_DEV_ISI_RENNES/)**
+# **[FeedBackProjet](https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES/blob/main/Antoine_Ferron--Feedback_Projet.pdf)**
+# **[Logigramme](https://github.com/Brextiar/CPI_3-25_DEV_ISI_RENNES/blob/main/Antoine-Ferron-Logigramme.pdf)**
 
-# CPI_3-25_DEV_ISI_RENNES
-
-# Projet Développement Web - Formateur : **[Brice AIELLO](https://github.com/baiello)**
+## Projet Développement Web - Formateur : **[Brice AIELLO](https://github.com/baiello)**
 ### École : Sup De Vinci - Rennes 
+
+### CPI_3-25_DEV_ISI_RENNES
 
 ---
 
