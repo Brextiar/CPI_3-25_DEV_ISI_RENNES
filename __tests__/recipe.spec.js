@@ -1,6 +1,6 @@
-import { describe, test, expect } from "vitest";
+import {describe, test, expect} from "vitest";
 
-import { createRecipe } from "../scripts/factories/recipe.js";
+import {createRecipe} from "../scripts/factories/recipe.js";
 
 const recipe = {
   id: 1,

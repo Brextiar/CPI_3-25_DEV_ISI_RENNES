@@ -28,7 +28,7 @@ function getData() {
  * Update the DOM with the recipes
  */
 function getRecipes() {
-  return getData()
+  getData()
     .then((recipes) => {
       updateDOM(recipes)
     })

@@ -113,4 +113,4 @@ function updateDOM(recipes) {
   updateUtensilsTagsList(recipes);
 }
 
-export {updateDOM};
+export {updateDOM, updateTagList, updateRecipesList};

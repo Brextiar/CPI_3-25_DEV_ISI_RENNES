@@ -1,5 +1,5 @@
 import {describe, test, expect} from "vitest";
-import { getData } from "../scripts/data/getRecipes.js";
+import {getData} from "../scripts/data/getRecipes.js";
 
 describe("The function getData", () => {
   test("should return a list of recipes", () => {
